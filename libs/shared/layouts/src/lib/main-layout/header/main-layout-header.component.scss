@@ -1,8 +1,24 @@
+@import "~@solved/styles/variables";
+
 .jumbotron {
-    // background-color: #000;
-    // background-image: url("../../../../../../apps/webbuilder/src/assets/images/jumbotron2.jpg");
+    // background-color: $main-color-light;
+    color: #cccccc;
+    background-image: url("~/assets/images/jumbo.jpg");
     background-size: cover;
-    background-position: 50% 60%;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     height: 400px;
+    .highlight {
+        color: $main-color-light;
+        font-weight: 500;
+    }
+}
+
+.btn-custom {
+    background-color: $main-color-light;
+    color: #eee;
+    outline-color: $main-color-light;
+    &:hover {
+        background-color: $main-color-dark;
+    }
 }
