@@ -43,6 +43,7 @@
     "@nestjs/platform-express": "^7.0.0",
     "@ng-bootstrap/ng-bootstrap": "^6.2.0",
     "@nrwl/angular": "9.5.1",
+    "@solved/styles": "file:libs/shared/styles",
     "bootstrap": "^4.4.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.4",

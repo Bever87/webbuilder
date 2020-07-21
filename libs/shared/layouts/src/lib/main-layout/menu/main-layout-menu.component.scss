@@ -1,0 +1,28 @@
+@import '~@solved/styles/variables';
+
+.navbar-custom {
+  background-color: $dgrey;
+  // border-bottom: 1px solid $main-color-light;
+  .navbar-brand,
+  .navbar-text {
+    color: $main-color-light;
+  }
+  .navbar-collapse {
+    height: 45px;
+    .navbar-collapse {
+      height: 45px;
+    }
+    .navbar-nav {
+      height: 45px;
+      line-height: 35px;
+    }
+  }
+  a,
+  a:active,
+  a:visited {
+    color: $main-color-light;
+  }
+  a:hover {
+    color: $main-color-dark;
+  }
+}
