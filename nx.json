@@ -37,6 +37,9 @@
     },
     "shared-layouts": {
       "tags": []
+    },
+    "shared-search": {
+      "tags": []
     }
   }
 }

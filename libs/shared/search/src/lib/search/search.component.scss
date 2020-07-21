@@ -1,0 +1,26 @@
+@import "~@solved/styles/variables";
+
+.search-container {
+    background: $main-color-dark;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h3 {
+        color: lighten($white, 30);
+    }
+    .neighbours {
+        display: flex;
+        input {
+            flex: 1;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .btn-search {
+            background-color: $main-color-light;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            color: lighten($white, 30);
+        }
+    }
+}

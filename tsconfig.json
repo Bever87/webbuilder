@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@solved/api-interfaces": ["libs/api-interfaces/src/index.ts"],
-      "@solved/shared/layouts": ["libs/shared/layouts/src/index.ts"]
+      "@solved/shared/layouts": ["libs/shared/layouts/src/index.ts"],
+      "@solved/shared/search": ["libs/shared/search/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
