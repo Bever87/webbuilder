@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     h3 {
-        color: lighten($white, 30);
+        color: lighten($brokenwhite, 30);
     }
     .neighbours {
         display: flex;
@@ -17,10 +17,13 @@
             border-bottom-right-radius: 0px;
         }
         .btn-search {
-            background-color: $main-color-light;
+            background-color: $main-color-dark;
             border-top-left-radius: 0px;
             border-bottom-left-radius: 0px;
-            color: lighten($white, 30);
+            color: lighten($brokenwhite, 30);
+        }
+        .btn-search:hover {
+            background-color: darken($main-color-dark, 20);
         }
     }
 }

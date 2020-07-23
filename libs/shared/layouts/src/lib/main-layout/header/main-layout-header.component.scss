@@ -2,7 +2,7 @@
 
 .jumbotron {
     // background-color: $main-color-light;
-    color: $white;
+    color: $brokenwhite;
     background-image: url("~/assets/images/jumbo.jpg");
     background-size: cover;
     background-position: 50% 50%;
@@ -10,7 +10,7 @@
     height: 400px;
     margin-bottom: 0px;
     .highlight {
-        color: $main-color-light;
+        color: $main-color-dark;
         font-weight: 500;
     }
 }

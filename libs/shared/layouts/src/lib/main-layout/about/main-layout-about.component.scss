@@ -1,7 +1,7 @@
 @import "~@solved/styles/variables";
 
 .container-fluid {
-  background-color: $lgrey;
+  background-color: $backgroundwhite;
 }
 
 .container {
@@ -38,7 +38,7 @@
     .card-body {
       margin-top: -55px;
       .card-title {
-        color: $main-color-light;
+        color: $main-color-dark;
         font-size: 20pt;
         text-align: center;
       }
