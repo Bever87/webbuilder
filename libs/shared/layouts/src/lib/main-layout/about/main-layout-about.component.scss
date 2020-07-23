@@ -1,0 +1,31 @@
+@import "~@solved/styles/variables";
+
+.container-fluid {
+  background-color: $dgrey;
+}
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  h1 {
+    color: $main-color-light;
+  }
+
+  .card {
+    margin-top: 60px;
+    border-color: $lgrey;
+    background-color: $white;
+    .image {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      top: -50px;
+      z-index: 1000;
+      background-color: $white;
+      border-radius: 90%;
+      border: 1px solid $lgrey;
+    }
+  }
+}
