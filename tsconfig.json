@@ -25,7 +25,8 @@
       "@solved/webbuilder/wizard-page": [
         "libs/webbuilder/wizard-page/src/index.ts"
       ],
-      "@solved/shared/wizard-shell": ["libs/shared/wizard-shell/src/index.ts"]
+      "@solved/shared/wizard-shell": ["libs/shared/wizard-shell/src/index.ts"],
+      "@solved/shared/models": ["libs/shared/models/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

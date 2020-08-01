@@ -1,0 +1,37 @@
+@import '~@solved/styles/variables';
+.step-row {
+  background: $backgroundwhite;
+  display: flex;
+  margin-bottom: 15px;
+  .steps {
+    justify-content: center;
+    display: flex;
+    transform: skewX(-20deg);
+    cursor: pointer;
+    p {
+      margin: 0px;
+      transform: skewX(20deg);
+    }
+  }
+  .active {
+    background: $main-color-dark;
+    color: white;
+  }
+}
+
+h3 {
+  font-size: 18pt;
+  margin: 5px 0px 20px 5px;
+  color: $main-color-dark;
+}
+.radio-container {
+  text-align: center;
+  width: 60px;
+  .color-scheme-container {
+    display: flex;
+    .color-example {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

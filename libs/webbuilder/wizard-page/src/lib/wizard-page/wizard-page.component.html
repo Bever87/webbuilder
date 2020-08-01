@@ -1,0 +1,35 @@
+<div class="step-row">
+    <div *ngFor="let i of stepsList" class="col-md-{{12/stepsList.length}} steps" [class.active]="i==currentStep" (click)="currentStep=i">
+        <p>Step {{ i }}</p>
+    </div>
+</div>
+<div class="form-container" [formGroup]="form">
+    <ng-container *ngIf="currentStep==2">
+        <h3>Algemene informatie</h3>
+        <div class="wizard-form-container">
+            <div class="form-group">
+                <label for="name">Zaaknaam</label>
+                <input type="text" name="name" class="form-control" autocomplete="off" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label for="name">Postcode</label>
+                <input type="text" name="zipCode" class="form-control" autocomplete="off" formControlName="zipCode">
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="currentStep==1">
+        <h3>Style en thema</h3>
+        <div class="wizard-form-container">
+            <div *ngFor="let color of colors" class="radio-container">
+                <div class="color-scheme-container">
+                    <div class="color-example" [style.background-color]="color.primary"></div>
+                    <div class="color-example" [style.background-color]="color.secondary"></div>
+                </div>
+                <input type="radio" value="{{color.name}}" (click)="setColors(color)" formControlName="selectedColor" />
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="currentStep==3">
+        <h3>Menu</h3>
+    </ng-container>
+</div>

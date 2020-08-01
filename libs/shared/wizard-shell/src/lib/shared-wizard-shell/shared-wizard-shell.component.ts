@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ResizeEvent } from 'angular-resizable-element';
-
+import { Step1Form } from '@solved/shared/models';
 @Component({
     selector: 'solved-shared-wiz-shell',
     templateUrl: './shared-wizard-shell.component.html',
@@ -8,8 +8,10 @@ import { ResizeEvent } from 'angular-resizable-element';
 })
 export class SharedWizardShellComponent {
     panelWidth = 350;
-    minlimit = 100;
+    minlimit = 200;
     maxlimit = 750;
+
+    data: Step1Form = {} as Step1Form;
 
     onResize(event: ResizeEvent): void {
         if (event.rectangle.width) {
@@ -23,5 +25,9 @@ export class SharedWizardShellComponent {
                 }
             }
         }
+    }
+
+    formUpdated(form: Step1Form) {
+        this.data = form;
     }
 }

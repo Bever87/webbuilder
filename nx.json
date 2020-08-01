@@ -49,6 +49,9 @@
     },
     "shared-wizard-shell": {
       "tags": []
+    },
+    "shared-models": {
+      "tags": []
     }
   }
 }
