@@ -304,6 +304,41 @@
           "style": "scss"
         }
       }
+    },
+    "webbuilder-wizard-page": {
+      "projectType": "library",
+      "root": "libs/webbuilder/wizard-page",
+      "sourceRoot": "libs/webbuilder/wizard-page/src",
+      "prefix": "solved",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/webbuilder/wizard-page/tsconfig.lib.json",
+              "libs/webbuilder/wizard-page/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/webbuilder/wizard-page/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/webbuilder/wizard-page/jest.config.js",
+            "tsConfig": "libs/webbuilder/wizard-page/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/webbuilder/wizard-page/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

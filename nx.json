@@ -43,6 +43,9 @@
     },
     "webbuilder-landing-page": {
       "tags": []
+    },
+    "webbuilder-wizard-page": {
+      "tags": []
     }
   }
 }
