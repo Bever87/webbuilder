@@ -7,20 +7,19 @@ import { ResizeEvent } from 'angular-resizable-element';
     styleUrls: ['./shared-wizard-shell.component.scss']
 })
 export class SharedWizardShellComponent {
-    right = 350;
+    panelWidth = 350;
     minlimit = 100;
     maxlimit = 750;
 
-    onResizeEnd(event: ResizeEvent): void {
-        if (event.edges.right) {
-            const checkValue = this.right + (+event.edges.right);
-            if (checkValue < this.minlimit) {
-                this.right = this.minlimit;
+    onResize(event: ResizeEvent): void {
+        if (event.rectangle.width) {
+            if (event.rectangle.width < this.minlimit) {
+                this.panelWidth = this.minlimit;
             } else {
-                if (checkValue > this.maxlimit) {
-                    this.right = this.maxlimit
+                if (event.rectangle.width > this.maxlimit) {
+                    this.panelWidth = this.maxlimit
                 } else {
-                    this.right += +event.edges.right;
+                    this.panelWidth = event.rectangle.width;
                 }
             }
         }
