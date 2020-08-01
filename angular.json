@@ -25,9 +25,7 @@
               "apps/webbuilder/src/favicon.ico",
               "apps/webbuilder/src/assets"
             ],
-            "styles": [
-              "apps/webbuilder/src/styles.scss"
-            ],
+            "styles": ["apps/webbuilder/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -263,6 +261,41 @@
             "tsConfig": "libs/shared/search/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "libs/shared/search/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "webbuilder-landing-page": {
+      "projectType": "library",
+      "root": "libs/webbuilder/landing-page",
+      "sourceRoot": "libs/webbuilder/landing-page/src",
+      "prefix": "solved",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/webbuilder/landing-page/tsconfig.lib.json",
+              "libs/webbuilder/landing-page/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/webbuilder/landing-page/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/webbuilder/landing-page/jest.config.js",
+            "tsConfig": "libs/webbuilder/landing-page/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/webbuilder/landing-page/src/test-setup.ts"
           }
         }
       },

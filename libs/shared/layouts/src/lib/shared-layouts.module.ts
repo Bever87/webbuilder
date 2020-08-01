@@ -7,9 +7,10 @@ import { SharedMainLayoutMenuComponent } from './main-layout/menu/main-layout-me
 import { NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
 import { SharedSearchModule } from '@solved/shared/search';
 
+const COMPONENTS = [SharedMainLayoutComponent, SharedMainLayoutHeaderComponent, SharedMainLayoutMenuComponent, SharedMainLayoutAboutComponent];
 @NgModule({
-  declarations: [SharedMainLayoutComponent, SharedMainLayoutHeaderComponent, SharedMainLayoutMenuComponent, SharedMainLayoutAboutComponent],
+  declarations: COMPONENTS,
   imports: [CommonModule, NgbTooltipModule, SharedSearchModule],
-  exports: [SharedMainLayoutComponent]
+  exports: COMPONENTS
 })
 export class SharedLayoutsModule {}

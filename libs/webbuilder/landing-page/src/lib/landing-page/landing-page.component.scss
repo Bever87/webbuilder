@@ -1,0 +1,52 @@
+@import '~@solved/styles/variables';
+
+.navbar-custom {
+  background-color: $backgroundwhite;
+  // border-bottom: 1px solid $main-color-light;
+  .navbar-brand,
+  .navbar-text {
+    color: $main-color-light;
+  }
+  .navbar-collapse {
+    height: 45px;
+    .navbar-collapse {
+      height: 45px;
+    }
+    .navbar-nav {
+      height: 45px;
+      line-height: 35px;
+    }
+  }
+  a,
+  a:active,
+  a:visited {
+    color: $main-color-light;
+  }
+  a:hover {
+    color: $main-color-dark;
+  }
+}
+
+.jumbotron {
+    // background-color: $main-color-light;
+    color: $brokenwhite;
+    background-image: url("~/assets/images/jumbo.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 400px;
+    margin-bottom: 0px;
+    .highlight {
+        color: $main-color-dark;
+        font-weight: 500;
+    }
+}
+
+.btn-custom {
+    background-color: $main-color-light;
+    color: #eee;
+    outline-color: $main-color-light;
+    &:hover {
+        background-color: $main-color-dark;
+    }
+}

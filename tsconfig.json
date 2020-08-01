@@ -18,7 +18,10 @@
     "paths": {
       "@solved/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@solved/shared/layouts": ["libs/shared/layouts/src/index.ts"],
-      "@solved/shared/search": ["libs/shared/search/src/index.ts"]
+      "@solved/shared/search": ["libs/shared/search/src/index.ts"],
+      "@solved/webbuilder/landing-page": [
+        "libs/webbuilder/landing-page/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

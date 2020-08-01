@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+import { RouterModule, Route } from '@angular/router'; // CLI imports router
+import { LandingPageComponent } from '@solved/webbuilder/landing-page';
 
-const routes: Routes = []; // sets up routes constant where you define your routes
+const routes: Route[] = [
+  {
+    path: '',
+    pathMatch: 'full',
+    component: LandingPageComponent
+  }
+]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
 @NgModule({
