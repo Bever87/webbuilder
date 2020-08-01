@@ -1,8 +1,12 @@
 <div class="box-container">
-    <div id="actions">
-        <h3>actions</h3>
-    </div>
-    <div id="preview">
-        <h1>This is the preview container</h1>
-    </div>
+  <div mwlResizable  [enableGhostResize]="true" [resizeSnapGrid]="{ right: 1}" 
+    [resizeEdges]="{ bottom: false, left: false, top: false, right: true }" (resizeEnd)="onResizeEnd($event)"
+    [style.width.px]="right"
+    id="actions">
+    <h3>actions</h3>
+    {{ right }}
+  </div>
+  <div id="preview">
+    <h1>This is the preview container</h1>
+  </div>
 </div>
