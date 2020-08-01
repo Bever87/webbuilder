@@ -46,6 +46,9 @@
     },
     "webbuilder-wizard-page": {
       "tags": []
+    },
+    "shared-wizard-shell": {
+      "tags": []
     }
   }
 }

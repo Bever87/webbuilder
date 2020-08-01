@@ -7,6 +7,7 @@ import { SharedLayoutsModule } from '@solved/shared/layouts';
 import { AppRoutingModule } from './app.routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WizardShellComponent } from './wizard-shell/wizard-shell.component';
+import { SharedWizardShellModule } from '@solved/shared/wizard-shell';
 @NgModule({
   declarations: [AppComponent, WizardShellComponent],
   imports: [
@@ -15,7 +16,8 @@ import { WizardShellComponent } from './wizard-shell/wizard-shell.component';
     NgbModule,
     AppRoutingModule,
     SharedLayoutsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedWizardShellModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,21 @@
+@import "~@solved/styles/variables";
+
+.box-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+  #actions {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, $backgroundwhite, darken($backgroundwhite, 3), darken($backgroundwhite, 8));
+  }
+
+  #preview {
+    height: 100%;
+    flex: 1;
+  }
+}

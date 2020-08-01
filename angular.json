@@ -339,6 +339,38 @@
           "style": "scss"
         }
       }
+    },
+    "shared-wizard-shell": {
+      "projectType": "library",
+      "root": "libs/shared/wizard-shell",
+      "sourceRoot": "libs/shared/wizard-shell/src",
+      "prefix": "solved",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/wizard-shell/tsconfig.lib.json",
+              "libs/shared/wizard-shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/wizard-shell/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/wizard-shell/jest.config.js",
+            "tsConfig": "libs/shared/wizard-shell/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/wizard-shell/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
