@@ -21,17 +21,30 @@
 
 h3 {
   font-size: 18pt;
-  margin: 5px 0px 20px 5px;
+  margin: 5px 0px 20px 0px;
   color: $main-color-dark;
 }
-.radio-container {
-  text-align: center;
-  width: 60px;
-  .color-scheme-container {
+h4 {
+  color: $main-color-light;
+  margin: 0px 0px 10px 0px;
+  font-size: 14pt;
+}
+
+.form-block {
+  margin-bottom: 25px;
+}
+
+.theme-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  label {
+    align-items: center;
+    width: 100%;
     display: flex;
-    .color-example {
-      height: 30px;
-      width: 30px;
+    align-items: center;
+    input {
+      margin-right: 10px;
     }
   }
 }

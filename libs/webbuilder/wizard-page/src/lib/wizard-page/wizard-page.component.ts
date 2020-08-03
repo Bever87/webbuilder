@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, Output, EventEmitter, Inject } from '@ang
 import { FormGroup, FormControl, FormArray } from '@angular/forms';
 import { takeUntil, debounceTime } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { COLOR_SCHEMES } from '@solved/shared/models';
+import { COLOR_SCHEMES, ALL_THEMES, ALL_LAYOUTS } from '@solved/shared/models';
 
 @Component({
     selector: 'solved-wiz-page',
@@ -15,7 +15,7 @@ export class CreateWizardPageComponent implements OnInit, OnDestroy {
     form: FormGroup;
     destroy$ = new Subject();
 
-    colors = COLOR_SCHEMES;
+    
 
     @Output()
     readonly formUpdated: EventEmitter<any> = new EventEmitter<any>();
@@ -26,7 +26,9 @@ export class CreateWizardPageComponent implements OnInit, OnDestroy {
             zipCode: new FormControl(),
             primaryColor: new FormControl(),
             secondaryColor: new FormControl(),
-            selectedColor: new FormControl()
+            selectedColor: new FormControl('color1'),
+            selectedTheme: new FormControl('light'),
+            selectedLayout: new FormControl('layout1')
         })
     }
 
@@ -37,6 +39,7 @@ export class CreateWizardPageComponent implements OnInit, OnDestroy {
         ).subscribe((value) => {
             this.formUpdated.emit(value);
         });
+        //  
     }
 
     setColors(color: any) {

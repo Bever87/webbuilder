@@ -1,0 +1,25 @@
+<div class="wizard-form-container" [formGroup]="form">
+    <h3>Style en thema</h3>
+    <h4>Choose your color</h4>
+    <div *ngFor="let color of colors" class="radio-container form-block">
+        <div class="color-scheme-container">
+            <div class="color-example" [style.background-color]="color.primary"></div>
+            <div class="color-example" [style.background-color]="color.secondary"></div>
+        </div>
+        <input type="radio" value="{{color.name}}" (click)="setColor(color)" formControlName="selectedColor" />
+    </div>
+    <h4>Choose a theme</h4>
+    <div class="theme-container form-block">
+        <label *ngFor="let t of themes">
+            <input type="radio" value="{{t}}" formControlName="selectedTheme" />
+            <span class="label">{{t}}</span>
+        </label>
+    </div>
+    <h4>Pick a layout</h4>
+    <div class="theme-container form-block">
+        <label *ngFor="let l of layouts">
+            <input type="radio" value="{{l.name}}" formControlName="selectedLayout" />
+            <span class="label">{{l.name}}</span>
+        </label>
+    </div>
+</div>

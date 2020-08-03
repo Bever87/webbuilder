@@ -1,0 +1,18 @@
+@import "~@solved/styles/variables";
+
+.radio-container {
+    text-align: center;
+    width: 50px;
+    display: inline-block;
+    .color-scheme-container {
+      display: flex;
+      width: 44px;
+      .color-example {
+        height: 22px;
+        width: 22px;
+      }
+    }
+    input:checked ~ .checkmark {
+      background-color: $main-color-dark;
+    }
+  }

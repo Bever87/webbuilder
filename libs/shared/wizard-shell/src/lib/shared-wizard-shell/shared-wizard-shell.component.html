@@ -4,7 +4,7 @@
     [style.width.px]="panelWidth" id="actions">
     <solved-wiz-page (formUpdated)="formUpdated($event)"></solved-wiz-page>
   </div>
-  <div id="preview" [style.background-color]="data.secondaryColor">
+  <div id="preview" [style.background-color]="data.primaryColor">
     <h1>Welkom, {{ (data ?data.name:'') }}</h1>
     <h2>Wonende in postcode {{ data.zipCode }}</h2>
   </div>

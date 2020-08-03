@@ -16,6 +16,8 @@
     position: relative;
     height: 100%;
     background: linear-gradient(90deg, $backgroundwhite, darken($backgroundwhite, 3), darken($backgroundwhite, 8));
+    min-width: 200px;
+    max-width: 700px;
   }
 
   #preview {
